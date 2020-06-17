@@ -1,0 +1,16 @@
+body{
+    background:#EBEDF2;
+}
+
+h1{
+    fontSize:100px ;
+    top-padding:10px;
+}
+
+ul{
+    list-style:none ; 
+    border:2px solid black ; 
+    background:white;
+    font: 16px Arial,sans-serif;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/showAddress.css">
+    </head>
+    
+    <body>
+
+     <div class="container">
+     <h1>Add and Manage Addresses </h1>
+     <p>You can add, edit, and delete addresses for future orders. You can also select a default address to make it easier to place an order.</p>
+     <br>
+
+    <% addressVar.forEach(function(address){ %>
+     <div>
+        <ul>
+           <li> <%= address.Address1 %> </li>
+           <li> <%= address.Address2 %> </li>
+           <li> <%= address.Pincode %> </li>
+           <li> <%= address.Landmark %> </li>
+           <li> <%= address.City %> </li>
+           <li> <%= address.State %> </li>
+        </ul>
+    </div>
+    <% }); %>
+
+    <br>
+
+     <a class="btn btn-primary btn-sm" href="/Address/new" role="button">Edit Address</a> 
+     <button type="submit" class="btn btn-primary btn-sm">Deliver to this address</button>
+  </div>
+
+</body>
+</html>

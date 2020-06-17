@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/new.css">
+    </head>
+    
+    <body>
+    <form action="/Address" method="POST" class="needs-validation" novalidate >
+    
+    <div class="form-group col-auto">
+         <label for="address1">Flat, House no., Building, Company, Apartment: </label>
+         <input type="text" name="address1" id="address1" class="form-control" required>
+         <div class="invalid-feedback">Please fill this field</div>
+    </div>
+    
+    
+    <div class="form-group col-auto">
+         <label for="address2">Area, Colony, Street, Sector, Village: </label>
+         <input type="text" name="address2" id="address2" class="form-control" required>
+         <div class="invalid-feedback">Please fill this field</div>
+    </div>
+    
+    
+    <div class="form-group col-auto">
+         <label for="pincode">Pincode:</label>
+         <input type="text" name="pincode" id="pincode" class="form-control" required>
+         <div class="invalid-feedback">Please fill this field</div>
+    </div>
+    
+    
+    <div class="form-group col-auto">
+         <label for="landmark">Landmark:</label>
+         <input type="text" name="landmark" placeholder=" e.g. near apollo hospital " id="landmark" class="form-control">
+    </div>
+
+
+    <div class="form-row col-auto">
+        <div class="col">
+            <div class="form-group">
+                 <label for="city">Town/City:</label>
+                 <input     type="text" name="city" id="city" class="form-control" required>
+                 <div class="invalid-feedback">Please fill this field</div>
+            </div>
+        </div>
+        
+        
+        <div class="col">
+            <div class="form-group">
+                <label for="state">State: </label>
+                <input list="states" type="text" name="state" id="state" class="form-control" required>
+                    <datalist id="states">
+                        <option value="Andhra Pradesh">
+                        <option value="Arunachal Pradesh ">
+                        <option value="Assam ">
+                        <option value="Bihar ">
+                        <option value="Chhattisgarh ">
+                        <option value="Goa">
+                        <option value="Gujarat">
+                        <option value="Haryana">
+                        <option value="Himachal Pradesh">
+                        <option value="Jharkhand">
+                        <option value="Karnataka">
+                        <option value="Kerala ">
+                        <option value="Madhya Pradesh ">
+                        <option value="Maharashtra">
+                        <option value="Manipur">
+                        <option value="Meghalaya ">
+                        <option value="Mizoram ">
+                        <option value="Nagaland ">
+                        <option value="Odisha ">
+                        <option value="Punjab">
+                        <option value="Rajasthan ">
+                        <option value="Sikkim ">
+                        <option value="Tamil Nadu">
+                        <option value="Telangana ">
+                        <option value="Tripura ">
+                        <option value="Uttar Pradesh">
+                        <option value="Uttarakhand">
+                        <option value="West Bengal ">
+                        <option value="Delhi">
+                    </datalist>
+                    <div class="invalid-feedback">Please fill this field</div>
+            </div>            
+        </div>
+    </div>
+    
+
+    
+    <div class="form-group col-auto">
+         <label for="addressType">Address Type: </label>
+         <select name="addressType" id="addressType" class="form-control" required>
+                <option value="address">Select an address type</option>
+                <option value="Home" >Home(9am - 9pm delivery)</option>
+                <option value="Office">Office/Commercial(10am - 6pm delivery)</option>
+         </select>
+    </div>
+    
+    
+    <div class="form-row col-auto float-right">
+        <div class="col-auto">
+          <a class="btn btn-primary" href="/" role="button">Go Back</a>  
+        </div>
+        
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Add Address</button>
+        </div>
+   
+    </div>
+    
+ </form>
+
+
+<script>
+    var form = document.querySelector(".needs-validation");
+    form.addEventListener("submit", function(){
+        if(form.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+            }
+        
+    form.classList.add("was-validated");
+    });
+</script>
+
+</body>
+</html>
+
+   
+
+
+
+
+
